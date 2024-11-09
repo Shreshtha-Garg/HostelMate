@@ -232,7 +232,8 @@ const AssignStaff = () => {
                             >
                                 <option value="all">All Grievances</option>
                                 <option value="electricity">Electricity</option>
-                                <option value="plumbing">Plumbing</option>
+                                <option value="plumber">Plumber</option>
+                                <option value="sweeper">Sweeper</option>
                                 <option value="technical">Technical</option>
                                 <option value="internet">Internet</option>
                             </select>
