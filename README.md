@@ -12,18 +12,18 @@ You can try the application using the following credentials:
 
 ### Student
 
-* **Email**: [student@iiitm.ac.in](mailto:student@iiitm.ac.in)
-* **Password**: student123
+* **Email**: [imt_2022002@iiitm.ac.in](mailto:imt_2022002@iiitm.ac.in)
+* **Password**: Abc@1234
 
 ### Staff
 
-* **Email**: [staff@iiitm.ac.in](mailto:staff@iiitm.ac.in)
-* **Password**: staff123
+* **Email**: [vijaykumar1234@iiitm.ac.in](mailto:staff@iiitm.ac.in)
+* **Password**: Abcd@123
 
 ### Warden/Admin
 
-* **Email**: [warden@iiitm.ac.in](mailto:warden@iiitm.ac.in)
-* **Password**: warden123
+* **Email**: [imt_2022103@iiitm.ac.in](mailto:warden@iiitm.ac.in)
+* **Password**: password123
 
 ## Demo Videos
 
@@ -66,8 +66,7 @@ You can try the application using the following credentials:
 
 * **React.js**
 * **Tailwind CSS**
-* **Preline UI + ComponentLand**
-
+* 
 ### Backend
 
 * **Node.js**
