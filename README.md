@@ -27,9 +27,9 @@ You can try the application using the following credentials:
 
 ## Demo Videos
 
-🎥 [Student Dashboard Demo](#)
-🎥 [Staff Dashboard Demo](#)
-🎥 [Warden/Admin Dashboard Demo](#)
+🎥 [Student Dashboard Demo](https://iiitmacin-my.sharepoint.com/:v:/g/personal/imt_2022103_iiitm_ac_in/ETTeXxMHc1BAm5JSwZNtgpwBPlwWYF3Toluq2-vQ2WwiDw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=80PoeD)
+🎥 [Staff Dashboard Demo](https://iiitmacin-my.sharepoint.com/personal/imt_2022103_iiitm_ac_in/_layouts/15/stream.aspx?id=%2Fpersonal%2Fimt%5F2022103%5Fiiitm%5Fac%5Fin%2FDocuments%2FHostelMate%20Demo%2FHostelMate%20Staff%20Dashboard%20Demo%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E5f2e7b2d%2D0013%2D4f54%2Db5ca%2D1f4dd1f435f1)
+🎥 [Warden/Admin Dashboard Demo](https://iiitmacin-my.sharepoint.com/:v:/g/personal/imt_2022103_iiitm_ac_in/EUFx54kP0MpOiGMsmyGi1yAB1x6WfnLA3tgxiHL0cx0qTQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=PKUaKG)
 
 
 ## Key Features Implemented
