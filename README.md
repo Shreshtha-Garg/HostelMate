@@ -31,7 +31,6 @@ You can try the application using the following credentials:
 🎥 [Staff Dashboard Demo](#)
 🎥 [Warden/Admin Dashboard Demo](#)
 
-*(Replace the above links with your actual demo video URLs.)*
 
 ## Key Features Implemented
 
