@@ -130,4 +130,4 @@ You can try the application using the following credentials:
 ---
 
 Made with ❤️ by **Shreshtha Garg**
-🔗 [Connect with me on LinkedIn](https://www.linkedin.com/in/shreshtha-garg/)
+🔗 [Connect with me on LinkedIn]([https://www.linkedin.com/in/shreshtha-garg/](https://www.linkedin.com/in/shreshth-garg-3ba629208/))
