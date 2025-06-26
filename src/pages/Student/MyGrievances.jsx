@@ -3,6 +3,7 @@ import GrievanceCard from "../../components/GrievanceCard";
 import { toast } from "react-toastify";
 import { useAuth } from "../../utils/Auth";
 import { Navigate } from "react-router-dom";
+import { use } from "react";
 
 const formatTimestamp = (timestamp) => {
   const date = new Date(timestamp);
@@ -18,7 +19,6 @@ const formatTimestamp = (timestamp) => {
 };
 
 
-const user_role = localStorage.getItem("user_role");
 
 const formatTimestamp1 = (timestamp) => {
   const date = new Date(timestamp);
@@ -31,6 +31,7 @@ const formatTimestamp1 = (timestamp) => {
 };
 
 const MyGrievances = () => {
+  const user_role = localStorage.getItem("user_role");
   const [grievances, setGrievances] = useState([]);
   const { authToken, headers } = useAuth();
   if (!authToken) {
@@ -40,6 +41,7 @@ const MyGrievances = () => {
   }
   else if (user_role !== "student") {
     toast.error("You need to be a student to view this page.");
+    console.log("You are logged in as a ",user_role);
     console.log("You need to be a student to view this page.");
     return <Navigate to="/login" />;
   }
