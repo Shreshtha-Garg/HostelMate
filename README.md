@@ -124,8 +124,8 @@ You can try the application using the following credentials:
 | Student Complaint View    | ![Complaint](./images/studentComplaint\(5\).png)       |
 | Warden Dashboard          | ![Warden](./images/wardenDashboard\(6\).png)           |
 | Warden Resolves           | ![Resolved](./images/wardenResolvedComplaint\(7\).png) |
-| Student Dashboard Updated | ![Updated](./images/studentDashboardUpdated\(8\).png)  |
-| ER Diagram                | ![ER](./images/hostelDatabaseErDiagram.png)            |
+| Staff Dashboard | ![staff](./images/studentDashboardUpdated\(8\).png)  |
+| Chat                | ![chat](./images/hostelDatabaseErDiagram.png)            |
 
 ---
 
