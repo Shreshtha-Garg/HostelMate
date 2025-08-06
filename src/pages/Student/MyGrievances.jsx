@@ -49,7 +49,7 @@ const MyGrievances = () => {
   const getGrievances = async (e) => {
     try {
       const user_id = JSON.parse(localStorage.getItem("user")).user_id;
-      const response = await fetch(`https://hostelmate-backend-5zcj.onrender.com/grievances/${user_id}`, {
+      const response = await fetch(`https://hostel-management-system-cdp3.onrender.com/grievances/${user_id}`, {
         method: "GET",
         headers: headers,
       });

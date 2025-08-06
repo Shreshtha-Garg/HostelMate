@@ -87,7 +87,7 @@ const VerifyOTP = () => {
 
     setIsVerifying(true);
     try {
-      const response = await fetch("https://hostelmate-backend-5zcj.onrender.com/users/verify-otp", {
+      const response = await fetch("https://hostel-management-system-cdp3.onrender.com/users/verify-otp", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

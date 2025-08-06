@@ -14,7 +14,7 @@ function ForgotPassword() {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://hostelmate-backend-5zcj.onrender.com/users/forgot-password",
+        "https://hostel-management-system-cdp3.onrender.com/users/forgot-password",
         {
           method: "POST",
           headers: { "content-type": "application/json" },
@@ -38,7 +38,7 @@ function ForgotPassword() {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://hostelmate-backend-5zcj.onrender.com/users/verify-password-reset-otp",
+        "https://hostel-management-system-cdp3.onrender.com/users/verify-password-reset-otp",
         {
           method: "POST",
           headers: { "content-type": "application/json" },
@@ -62,7 +62,7 @@ function ForgotPassword() {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://hostelmate-backend-5zcj.onrender.com/users/reset-password",
+        "https://hostel-management-system-cdp3.onrender.com/users/reset-password",
         {
           method: "POST",
           headers: { "content-type": "application/json" },

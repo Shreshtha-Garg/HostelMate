@@ -30,7 +30,7 @@ const RegisterStaffForm = () => {
     e.preventDefault();
     console.log(formData);
     try {
-      const response = await fetch("https://hostelmate-backend-5zcj.onrender.com/users/createStaff", {
+      const response = await fetch("https://hostel-management-system-cdp3.onrender.com/users/createStaff", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

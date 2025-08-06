@@ -109,7 +109,7 @@ const Chat = ({ chatroomId: initialChatroomId }) => {
   const fetchPreviousMessages = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`https://hostelmate-backend-5zcj.onrender.com/chat/${chatroomId}/messages`);
+      const response = await axios.get(`https://hostel-management-system-cdp3.onrender.com/chat/${chatroomId}/messages`);
       const previousMessages = response.data.map(msg => ({
         ...msg,
         timestamp: new Date(msg.createdAt).toLocaleTimeString([], {
