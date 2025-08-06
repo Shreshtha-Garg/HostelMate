@@ -66,7 +66,6 @@ You can try the application using the following credentials:
 
 * **React.js**
 * **Tailwind CSS**
-* 
 ### Backend
 
 * **Node.js**
