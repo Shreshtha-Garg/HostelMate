@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { useAuth } from "../../utils/Auth";
 import { Navigate } from "react-router-dom";
 import { use } from "react";
+import { API_BASE_URL } from "../../constants.jsx";
 
 const formatTimestamp = (timestamp) => {
   const date = new Date(timestamp);
@@ -49,7 +50,7 @@ const MyGrievances = () => {
   const getGrievances = async (e) => {
     try {
       const user_id = JSON.parse(localStorage.getItem("user")).user_id;
-      const response = await fetch(`https://hostel-management-system-cdp3.onrender.com/grievances/${user_id}`, {
+      const response = await fetch(`${API_BASE_URL}/grievances/${user_id}`, {
         method: "GET",
         headers: headers,
       });

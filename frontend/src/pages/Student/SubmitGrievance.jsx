@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 import { useAuth } from "../../utils/Auth";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../../constants.jsx";
 
 const SubmitGrievance = () => {
   const { authToken, headers } = useAuth();
@@ -50,7 +51,7 @@ const SubmitGrievance = () => {
     }
     try {
       const user_id = JSON.parse(localStorage.getItem("user")).user_id;
-      const response = await fetch("https://hostel-management-system-cdp3.onrender.com/grievances/new", {
+      const response = await fetch(`${API_BASE_URL}/grievances/new`, {
         method: "POST",
         headers: headers,
         body: JSON.stringify({ ...grievanceData, user_id: user_id }),

@@ -2,6 +2,7 @@ import React, { useState, useEffect,useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Pencil, Plus } from 'lucide-react';
 import axios from 'axios';
+import { API_BASE_URL } from '../constants.jsx';
 
 const AssignStaff = () => {
     const navigate = useNavigate();
@@ -24,7 +25,7 @@ const AssignStaff = () => {
     useEffect(() => {
         const fetchStaffMembers = async () => {
             try {
-                const response = await axios.get('https://hostel-management-system-cdp3.onrender.com/grievances/staff');
+                const response = await axios.get(`${API_BASE_URL}/grievances/staff`);
                 setStaffMembers(response.data);
                 console.log(response.data);
 
@@ -42,7 +43,7 @@ const AssignStaff = () => {
         try {
             setIsLoading(true);
             setError(null);
-            const response = await axios.get('https://hostel-management-system-cdp3.onrender.com/grievances/open');
+            const response = await axios.get(`${API_BASE_URL}/grievances/open`);
             setGrievances(response.data);
         } catch (err) {
             console.error('Failed to fetch grievances:', err);
@@ -56,7 +57,7 @@ const AssignStaff = () => {
     const handleStaffAssignment = async (grievanceId, staffId) => {
         try {
             setError(null);
-            const response = await axios.put(`https://hostel-management-system-cdp3.onrender.com/grievances/assign`, {
+            const response = await axios.put(`${API_BASE_URL}/grievances/assign`, {
                 grievance_id: grievanceId,
                 staff_id: staffId,
             });

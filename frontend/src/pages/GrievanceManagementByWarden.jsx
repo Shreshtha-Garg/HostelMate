@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Pencil } from 'lucide-react';
 import axios from 'axios';
+import { API_BASE_URL } from '../constants.jsx';
 
 const GrievanceManagementByWarden = () => {
     const navigate = useNavigate();
@@ -23,7 +24,7 @@ const GrievanceManagementByWarden = () => {
         try {
             setIsLoading(true);
             setError(null);
-            const response = await axios.get('https://hostel-management-system-cdp3.onrender.com/grievances/open');
+            const response = await axios.get(`${API_BASE_URL}/grievances/open`);
             console.log(response.data);
             
             setGrievances(response.data);
@@ -39,7 +40,7 @@ const GrievanceManagementByWarden = () => {
     const handleStatusChange = async (grievanceId, newStatus) => {
         try {
             setError(null);
-            const response = await axios.put(`https://hostel-management-system-cdp3.onrender.com/grievances/update/${grievanceId}`, {
+            const response = await axios.put(`${API_BASE_URL}/grievances/update/${grievanceId}`, {
                 grievance_id: grievanceId,
                 status: newStatus,
             });

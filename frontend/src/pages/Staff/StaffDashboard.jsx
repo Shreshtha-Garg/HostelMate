@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { User, FileText, CheckSquare, X } from 'lucide-react';
 import axios from 'axios';
+import { API_BASE_URL } from '../../constants.jsx';
 
 const StaffDashboard = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -32,7 +33,7 @@ const StaffDashboard = () => {
 
   const fetchStaffStats = async () => {
     try {
-      const response = await axios.get(`https://hostel-management-system-cdp3.onrender.com/staff/getStaffStats/${staffId}`);
+      const response = await axios.get(`${API_BASE_URL}/staff/getStaffStats/${staffId}`);
       setStaffStats(response.data);
     } catch (error) {
       console.error('Error fetching staff stats:', error);
@@ -41,7 +42,7 @@ const StaffDashboard = () => {
 
   const fetchResolvedGrievances = async () => {
     try {
-      const response = await axios.get(`https://hostel-management-system-cdp3.onrender.com/staff/getStaffHistory/${staffId}`);
+      const response = await axios.get(`${API_BASE_URL}/staff/getStaffHistory/${staffId}`);
       setResolvedGrievances(response.data);
     } catch (error) {
       console.error('Error fetching resolved grievances:', error);
@@ -50,7 +51,7 @@ const StaffDashboard = () => {
 
   const fetchActiveGrievances = async () => {
     try {
-      const response = await axios.get(`https://hostel-management-system-cdp3.onrender.com/staff/getActiveGrievances/${staffId}`);
+      const response = await axios.get(`${API_BASE_URL}/staff/getActiveGrievances/${staffId}`);
       setActiveGrievances({
         assignedTasks: response.data.assignedTasks,
         highPriorityCount: response.data.highPriorityCount,
@@ -63,7 +64,7 @@ const StaffDashboard = () => {
 
   const fetchStaffTasks = async () => {
     try {
-      const response = await axios.get(`https://hostel-management-system-cdp3.onrender.com/staff/getStaffTasks/${staffId}`);
+      const response = await axios.get(`${API_BASE_URL}/staff/getStaffTasks/${staffId}`);
       console.log(response);
       setStaffTasks(response.data);
     } catch (error) {
@@ -73,7 +74,7 @@ const StaffDashboard = () => {
 
   const handleStaffResolution = async (grievanceId) => {
     try {
-      await axios.put('https://hostel-management-system-cdp3.onrender.com/staff/markComplete', { grievance_id: grievanceId });
+      await axios.put(`${API_BASE_URL}/staff/markComplete`, { grievance_id: grievanceId });
       fetchActiveGrievances(); // Refresh the active grievances list
     } catch (error) {
       console.error('Error marking grievance as complete:', error);

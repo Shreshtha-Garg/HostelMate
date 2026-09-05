@@ -1,6 +1,7 @@
 import { io } from 'socket.io-client';
+import { API_BASE_URL } from '../constants.jsx';
 
-const SOCKET_SERVER_URL = 'https://hostel-management-system-cdp3.onrender.com/'; // Replace with your server URL
+const SOCKET_SERVER_URL = API_BASE_URL; // Uses localhost:3000 by default
 
 const socket = io(SOCKET_SERVER_URL, {
     autoConnect: true,

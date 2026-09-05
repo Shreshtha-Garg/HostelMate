@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { FaEnvelope, FaLock } from "react-icons/fa";
+import { API_BASE_URL } from "../constants.jsx";
 
 function Login() {
   const navigate = useNavigate();
@@ -38,7 +39,7 @@ function Login() {
     setIsLoading(true);//added
     try {
       const body = { email, password };
-      const response = await fetch("https://hostel-management-system-cdp3.onrender.com/users/login", {
+      const response = await fetch(`${API_BASE_URL}/users/login`, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(body),

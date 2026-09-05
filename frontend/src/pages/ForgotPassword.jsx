@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../constants.jsx";
 
 function ForgotPassword() {
   const [step, setStep] = useState(1); // Step 1: Request Reset, Step 2: OTP Verification, Step 3: Reset Password
@@ -14,7 +15,7 @@ function ForgotPassword() {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://hostel-management-system-cdp3.onrender.com/users/forgot-password",
+        `${API_BASE_URL}/users/forgot-password`,
         {
           method: "POST",
           headers: { "content-type": "application/json" },
@@ -38,7 +39,7 @@ function ForgotPassword() {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://hostel-management-system-cdp3.onrender.com/users/verify-password-reset-otp",
+        `${API_BASE_URL}/users/verify-password-reset-otp`,
         {
           method: "POST",
           headers: { "content-type": "application/json" },
@@ -62,7 +63,7 @@ function ForgotPassword() {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://hostel-management-system-cdp3.onrender.com/users/reset-password",
+        `${API_BASE_URL}/users/reset-password`,
         {
           method: "POST",
           headers: { "content-type": "application/json" },

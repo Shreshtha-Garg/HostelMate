@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import Navbar from "../components/Navbar";
 import UrgencyLabel from "../components/UrgencyLabel";
 import ChatBubble from '../components/ChatBubble';
+import { API_BASE_URL } from "../constants.jsx";
 
 const GrievanceDetails = () => {
   const { grievance_id } = useParams();
@@ -30,7 +31,7 @@ const GrievanceDetails = () => {
         return;
       }
       try {
-        const response = await fetch(`https://hostel-management-system-cdp3.onrender.com/grievances/details/${grievance_id}`, {
+        const response = await fetch(`${API_BASE_URL}/grievances/details/${grievance_id}`, {
           method: 'GET',
           headers: headers
         });
@@ -49,7 +50,7 @@ const GrievanceDetails = () => {
             items_used: data.items_used || [],
           });
 
-          const userData = await fetch(`https://hostel-management-system-cdp3.onrender.com/users/getUserDetailsById/${data.user_id}`, {
+          const userData = await fetch(`${API_BASE_URL}/users/getUserDetailsById/${data.user_id}`, {
             method: 'GET',
             headers: headers
           }
@@ -61,7 +62,7 @@ const GrievanceDetails = () => {
           } else {
             toast.error("Failed to fetch user details");
           }
-          const chatroomResponse = await fetch('https://hostel-management-system-cdp3.onrender.com/chat/createChatroom', {
+          const chatroomResponse = await fetch(`${API_BASE_URL}/chat/createChatroom`, {
             method: 'POST',
             headers: {
               ...headers,
@@ -95,7 +96,7 @@ const GrievanceDetails = () => {
 
   const handleUpdate = async (updatedGrievance) => {
     try {
-      const response = await fetch(`https://hostel-management-system-cdp3.onrender.com/grievances/update/${grievance_id}`, {
+      const response = await fetch(`${API_BASE_URL}/grievances/update/${grievance_id}`, {
         method: 'PUT',
         headers: {
           ...headers,
@@ -126,7 +127,7 @@ const GrievanceDetails = () => {
     }
 
     try {
-      const response = await fetch(`https://hostel-management-system-cdp3.onrender.com/grievances/delete/${grievance_id}`, {
+      const response = await fetch(`${API_BASE_URL}/grievances/delete/${grievance_id}`, {
         method: 'DELETE',
         headers: headers
       });

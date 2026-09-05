@@ -10,6 +10,7 @@ import userRoutes from './routes/userRoutes.js';
 import chatRoutes from './routes/chatRoutes.js';
 import grievanceRoutes from './routes/grievanceRoutes.js';
 import staffRoutes from './routes/staffRouter.js';
+import translationRoutes from './routes/translationRoutes.js';
 import http from 'http';
 import dotenv from 'dotenv';
 import './keepAlive.js';
@@ -27,6 +28,7 @@ app.use("/grievances/", grievanceRoutes);
 app.use("/users/", userRoutes);
 app.use("/chat/", chatRoutes);
 app.use("/staff/",staffRoutes);
+app.use("/translate/", translationRoutes);
 
 // Handle invalid routes
 app.use((req, res) => {

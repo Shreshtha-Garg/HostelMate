@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useAuth } from "../utils/Auth";
+import { API_BASE_URL } from "../constants.jsx";
 
 const formatTimestamp = (timestamp) => {
   const date = new Date(timestamp);
@@ -29,7 +30,7 @@ const WardenComplaints = () => {
 
   const getComplaints = async (e) => {
     try {
-      const response = await fetch("https://hostel-management-system-cdp3.onrender.com/complaints", {
+      const response = await fetch(`${API_BASE_URL}/complaints`, {
         method: "GET",
         headers: headers,
       });
@@ -43,7 +44,7 @@ const WardenComplaints = () => {
 
   const handleApproval = async (id) => {
     try {
-      const response = await fetch(`https://hostel-management-system-cdp3.onrender.com/complaints/${id}`, {
+      const response = await fetch(`${API_BASE_URL}/complaints/${id}`, {
         method: "POST",
         headers: headers,
       });
@@ -61,7 +62,7 @@ const WardenComplaints = () => {
 
   const deleteComplaint = async (id) => {
     try {
-      const response = await fetch(`https://hostel-management-system-cdp3.onrender.com/complaints/${id}`, {
+      const response = await fetch(`${API_BASE_URL}/complaints/${id}`, {
         method: "DELETE",
         headers: headers,
       });

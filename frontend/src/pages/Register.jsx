@@ -1,5 +1,5 @@
 import { useNavigate, Link } from "react-router-dom";
-import { Roles } from "../constants";
+import { Roles, API_BASE_URL } from "../constants";
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import {
@@ -179,7 +179,7 @@ function Register() {
         };
       }
   
-      const response = await fetch("https://hostel-management-system-cdp3.onrender.com/users/register", {
+      const response = await fetch(`${API_BASE_URL}/users/register`, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(body),

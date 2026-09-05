@@ -1,6 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
 import socket from '../utils/socket';
 import axios from 'axios';
+import { API_BASE_URL } from '../constants.jsx';
+import { TRANSLATE_URL } from '../config/apiConfig.js';
 
 const Chat = ({ chatroomId: initialChatroomId }) => {
   const [messages, setMessages] = useState([]);
@@ -82,19 +84,18 @@ const Chat = ({ chatroomId: initialChatroomId }) => {
 
   const translateMessage = async (messageText, language) => {
     try {
-      const languageCode = getLanguageCode(language);
-      if (!languageCode) {
-        console.error(`Language "${language}" not supported.`);
+      if (!language) {
+        console.error('Target language not specified');
         return null;
       }
 
-      const response = await axios.post('https://archcoder-hostel-management-and-greivance-redres-2eeefad.hf.space/api/translate', {
-        user_message: messageText,
-        target_language: languageCode,
+      const response = await axios.post(TRANSLATE_URL, {
+        text: messageText,
+        target_language: language,
       });
       console.log('Translated message:', response.data);
       
-      return response.data.translated_message;
+      return response.data.translated_text;
     } catch (error) {
       console.log('Error translating message:', error);
       console.error('Error translating message:', error);
@@ -109,7 +110,7 @@ const Chat = ({ chatroomId: initialChatroomId }) => {
   const fetchPreviousMessages = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`https://hostel-management-system-cdp3.onrender.com/chat/${chatroomId}/messages`);
+      const response = await axios.get(`${API_BASE_URL}/chat/${chatroomId}/messages`);
       const previousMessages = response.data.map(msg => ({
         ...msg,
         timestamp: new Date(msg.createdAt).toLocaleTimeString([], {

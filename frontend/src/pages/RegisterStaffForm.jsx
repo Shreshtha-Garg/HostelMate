@@ -8,6 +8,7 @@ import {
   FaLock,
   FaPhone,
 } from "react-icons/fa";
+import { API_BASE_URL } from "../constants.jsx";
 
 const RegisterStaffForm = () => {
   const [formData, setFormData] = useState({
@@ -30,7 +31,7 @@ const RegisterStaffForm = () => {
     e.preventDefault();
     console.log(formData);
     try {
-      const response = await fetch("https://hostel-management-system-cdp3.onrender.com/users/createStaff", {
+      const response = await fetch(`${API_BASE_URL}/users/createStaff`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

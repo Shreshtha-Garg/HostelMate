@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from '../constants.jsx';
 
 const VerifyOTP = () => {
   const location = useLocation();
@@ -87,7 +88,7 @@ const VerifyOTP = () => {
 
     setIsVerifying(true);
     try {
-      const response = await fetch("https://hostel-management-system-cdp3.onrender.com/users/verify-otp", {
+      const response = await fetch(`${API_BASE_URL}/users/verify-otp`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

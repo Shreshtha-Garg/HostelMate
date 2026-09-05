@@ -22,6 +22,7 @@ import {
 import StaffStatusSwitch from "../components/StaffStatusSwitch";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../components/NavLogo";
+import { API_BASE_URL } from "../constants.jsx";
 
 const WardenDashboard = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
@@ -86,9 +87,9 @@ const WardenDashboard = () => {
         // Fetch all data in parallel
         const [statsResponse, staffResponse, activitiesResponse] =
           await Promise.all([
-            fetch("https://hostel-management-system-cdp3.onrender.com/grievances/quick-stats"),
-            fetch("https://hostel-management-system-cdp3.onrender.com/grievances/staff-overview"),
-            fetch("https://hostel-management-system-cdp3.onrender.com/grievances/recent-activity"),
+            fetch(`${API_BASE_URL}/grievances/quick-stats`),
+            fetch(`${API_BASE_URL}/grievances/staff-overview`),
+            fetch(`${API_BASE_URL}/grievances/recent-activity`),
           ]);
 
         if (!statsResponse.ok || !staffResponse.ok || !activitiesResponse.ok) {
@@ -253,7 +254,7 @@ const WardenDashboard = () => {
         setIsLoading(true);
         try {
           const response = await fetch(
-            "https://hostel-management-system-cdp3.onrender.com/grievances/staff"
+            `${API_BASE_URL}/grievances/staff`
           );
           if (!response.ok) {
             throw new Error("Failed to fetch staff data");
@@ -283,7 +284,7 @@ const WardenDashboard = () => {
     const handleUpdateStatus = async (staffMember) => {
       try {
         const response = await fetch(
-          `https://hostel-management-system-cdp3.onrender.com/users/updateStaffStatus/${staffMember.user_id}`,
+          `${API_BASE_URL}/users/updateStaffStatus/${staffMember.user_id}`,
           {
             method: 'PUT',
             headers: {
@@ -512,7 +513,7 @@ const WardenDashboard = () => {
     // Function to fetch performance data from API
     const fetchPerformanceData = async () => {
       try {
-        const response = await fetch('https://hostel-management-system-cdp3.onrender.com/grievances/performance-data', {
+        const response = await fetch(`${API_BASE_URL}/grievances/performance-data`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
