@@ -114,18 +114,19 @@ You can try the application using the following credentials:
 
 ## Screenshots
 
+
 | Feature                      | Screenshot                                    |
 |-----------------------------|-----------------------------------------------|
-| Login                       | ![Login](./images/login.png)                  |
-| Signup                      | ![Signup](./images/signup.png)                |
-| Student Dashboard           | ![Student Dashboard](./images/studentDashboard.png) |
-| Complaint Submission        | ![Create](./images/createComplaint.png)       |
-| Student Complaint View      | ![Student Complaint](./images/studentComplaint.png) |
-| Warden Dashboard            | ![Warden](./images/wardenDashboard.png)       |
-| Warden Resolve      | ![Resolve](./images/resolveGrievance.png)     |
-| Warden Assign Staff View    | ![Assign Staff](./images/assignStaff.png)     |
-| Staff Dashboard             | ![Staff Dashboard](./images/staffDashboard.png) |
-| Chat                        | ![Chat](./images/chat.png)                    |
+| Login                       | ![Login](./frontend/images/login.png)                  |
+| Signup                      | ![Signup](./frontend/images/signup.png)                |
+| Student Dashboard           | ![Student Dashboard](./frontend/images/studentDashboard.png) |
+| Complaint Submission        | ![Create](./frontend/images/createComplaint.png)       |
+| Student Complaint View      | ![Student Complaint](./frontend/images/studentComplaint.png) |
+| Warden Dashboard            | ![Warden](./frontend/images/wardenDashboard.png)       |
+| Warden Resolve      | ![Resolve](./frontend/images/resolveGrievance.png)     |
+| Warden Assign Staff View    | ![Assign Staff](./frontend/images/assignStaff.png)     |
+| Staff Dashboard             | ![Staff Dashboard](./frontend/images/staffDashboard.png) |
+| Chat                        | ![Chat](./frontend/images/chat.png)                    |
 
 ---
 
