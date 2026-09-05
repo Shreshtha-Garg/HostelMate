@@ -85,19 +85,31 @@ const Chat = ({ chatroomId: initialChatroomId }) => {
   const translateMessage = async (messageText, language) => {
     try {
       if (!language) {
-        console.error('Target language not specified');
+        console.error('❌ [FRONTEND] Target language not specified');
         return null;
       }
+
+      console.log('\n📤 [FRONTEND] Sending translation request to backend:');
+      console.log(`   📝 Text to translate: "${messageText}"`);
+      console.log(`   🌐 Target language: "${language}"`);
+      console.log(`   🔗 API URL: ${TRANSLATE_URL}`);
 
       const response = await axios.post(TRANSLATE_URL, {
         text: messageText,
         target_language: language,
       });
-      console.log('Translated message:', response.data);
+      console.log('✅ [FRONTEND] Received response from backend:');
+      console.log(`   🎯 Translated text: "${response.data.translated_text}"`);
+      console.log(`   📥 Full response:`, response.data);
+      console.log('');
       
       return response.data.translated_text;
     } catch (error) {
-      console.log('Error translating message:', error);
+      console.log('❌ [FRONTEND] Error translating message:');
+      console.log(`   Error details:`, error.message);
+      console.log(`   Response status: ${error.response?.status}`);
+      console.log(`   Response data:`, error.response?.data);
+      console.log('');
       console.error('Error translating message:', error);
       return null;
     }
